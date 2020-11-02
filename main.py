@@ -1,4 +1,5 @@
 #! /usr/env python3
 
-import pillow
+import PIL as p
 import numpy as np
+import sys
