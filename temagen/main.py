@@ -17,7 +17,7 @@ class Algorithm:
         return self._type
     
 
-    def run(...args):
+    def run(self, ...args):                     # Still can be improve
 
         def k_means():
             pass
