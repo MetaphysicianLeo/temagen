@@ -7,10 +7,31 @@ import sys
 from enum import Enum
 
 class Algorithm:
-    pass
+    def __init__(self, type):
+        try:
+            self._type = AlgorithmType(type)
+        except ValueError as e:
+            raise
+    
+    def getType():
+        return self._type
+    
+
+    def run(...args):
+
+        def k_means():
+            pass
+
+
+        selector = {
+                AlgprithmType.k_means: k_means
+        }
+
+        return selector[self.getType()](...args)
+
 
 class AlgorithmType(Enum):
-    K_means = "K_means"
+    k_means = "k_means"
 
 def set_args():
     parser = argparse.ArgumentParser(prog="temagen")
@@ -29,3 +50,4 @@ def k_means():
 if __name__ == "__main__":
     args = set_args()
     print(args)
+    Algorithm("tt")
