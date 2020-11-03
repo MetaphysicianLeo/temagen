@@ -4,10 +4,13 @@ import PIL as p
 import numpy as np
 import argparse
 import sys
+from enum import Enum
 
-class AlgorithmType:
+class Algorithm:
     pass
 
+class AlgorithmType(Enum):
+    K_means = "K_means"
 
 def set_args():
     parser = argparse.ArgumentParser(prog="temagen")
