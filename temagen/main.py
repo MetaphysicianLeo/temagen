@@ -11,14 +11,20 @@ class Algorithm:
         self.selector = {
             AlgorithmType.k_means: self._k_means
         }
-        
+        self.select(type)
+        self.run()
 
+    def run(self):
+        self.selector[self.getType()]()
+
+    def _k_means(self):
+        print("success")
         
     def getType(self):
         return self._type
 
 
-    def select(self):
+    def select(self, type):
         try:
             self._type = AlgorithmType(type)
         except ValueError as e:
@@ -38,12 +44,8 @@ def set_args():
     return parser.parse_args()
 
 
-
-def k_means():
-    pass
-  
 if __name__ == "__main__":
     args = set_args()
     print(args)
-    Algorithm("")
+    Algorithm("k_means")
 
