@@ -8,26 +8,21 @@ from enum import Enum
 
 class Algorithm:
     def __init__(self, type):
+        self.selector = {
+            AlgorithmType.k_means: self._k_means
+        }
+        
+
+        
+    def getType(self):
+        return self._type
+
+
+    def select(self):
         try:
             self._type = AlgorithmType(type)
         except ValueError as e:
             raise
-    
-    def getType():
-        return self._type
-    
-
-    def run(self, ...args):                     # Still can be improve
-
-        def k_means():
-            pass
-
-
-        selector = {
-                AlgprithmType.k_means: k_means
-        }
-
-        return selector[self.getType()](...args)
 
 
 class AlgorithmType(Enum):
@@ -46,8 +41,9 @@ def set_args():
 
 def k_means():
     pass
-
+  
 if __name__ == "__main__":
     args = set_args()
     print(args)
-    Algorithm("tt")
+    Algorithm("")
+
